@@ -66,18 +66,18 @@ Linear Discriminant Analysis (LDA)                    ~75.5%                    
 Random Forest Ensemble                                ~84.3%                           Production Candidate
 
 # Random Forest Classification Report
-precision    recall  f1-score   support
+                precision    recall  f1-score   support
 
       CT Win       0.84      0.84      0.84     10174
        T Win       0.84      0.84      0.84     10193
 
-    accuracy                           0.84     20367
-   macro avg       0.84      0.84      0.84     20367
-weighted avg       0.84      0.84      0.84     20367
+     accuracy                           0.84     20367
+     macro avg      0.84      0.84      0.84     20367
+     weighted avg   0.84      0.84      0.84     20367
 
 ## 🧠 Key Learnings & Engineering Outcomes
-End-to-End Execution: Developed a complete machine learning lifecycle including pipeline ingestion, structured data imputation, feature scaling, mathematical dimensionality reduction, and evaluation matrix generations.
+- End-to-End Execution: Developed a complete machine learning lifecycle including pipeline ingestion, structured data imputation, feature scaling, mathematical dimensionality reduction, and evaluation matrix generations.
 
-Scaling Realities: Confirmed that while simpler models like LDA offer excellent mathematical explainability and fast inference speeds, complex ensemble methods provide the non-linear boundaries required to secure a significant ~9% accuracy boost on live game telemetry.
+- Scaling Realities: Confirmed that while simpler models like LDA offer excellent mathematical explainability and fast inference speeds, complex ensemble methods provide the non-linear boundaries required to secure a significant ~9% accuracy boost on live game telemetry.
 
-Clean Code Standards: Refactored exploratory notebook blocks into modular, reusable Python functions paired with explicit parameter tracking to ensure script maintainability and scalability.
+- Clean Code Standards: Refactored exploratory notebook blocks into modular, reusable Python functions paired with explicit parameter tracking to ensure script maintainability and scalability.
