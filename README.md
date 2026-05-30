@@ -41,7 +41,7 @@ counterstrike-round-predictor/
 └── requirements.txt                    # Project dependencies and environment tracking
 ```
 
-⚙️ Data Pipeline & Technical Architecture
+## ⚙️ Data Pipeline & Technical Architecture
 1. Data Ingestion & Sanitization
 Addressed low-memory mixed-datatype warnings during data ingestion directly via optimized interpreter parameters.
 
@@ -59,14 +59,14 @@ Linear Discriminant Analysis (LDA): Employed as a baseline mathematical reductio
 
 Random Forest Classifier: Deployed as an advanced ensemble technique to capture non-linear relationships, multi-variable interactions, and deep decision boundaries.
 
-📈 Performance Matrix & Results
+## 📈 Performance Matrix & Results
 The models were evaluated using overall predictive accuracy alongside detailed precision, recall, and F1-score classification metrics:
 Predictive Model Architecture               Classification Test Accuracy            Optimization Target Status
 Linear Discriminant Analysis (LDA)                    ~75.5%                           Baseline Benchmarking
 Random Forest Ensemble                                ~84.3%                           Production Candidate
 
-Random Forest Classification Report
-                precision    recall  f1-score   support
+# Random Forest Classification Report
+precision    recall  f1-score   support
 
       CT Win       0.84      0.84      0.84     10174
        T Win       0.84      0.84      0.84     10193
@@ -75,7 +75,7 @@ Random Forest Classification Report
    macro avg       0.84      0.84      0.84     20367
 weighted avg       0.84      0.84      0.84     20367
 
-🧠 Key Learnings & Engineering Outcomes
+## 🧠 Key Learnings & Engineering Outcomes
 End-to-End Execution: Developed a complete machine learning lifecycle including pipeline ingestion, structured data imputation, feature scaling, mathematical dimensionality reduction, and evaluation matrix generations.
 
 Scaling Realities: Confirmed that while simpler models like LDA offer excellent mathematical explainability and fast inference speeds, complex ensemble methods provide the non-linear boundaries required to secure a significant ~9% accuracy boost on live game telemetry.
