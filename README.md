@@ -61,9 +61,9 @@ Random Forest Classifier: Deployed as an advanced ensemble technique to capture 
 
 ## 📈 Performance Matrix & Results
 The models were evaluated using overall predictive accuracy alongside detailed precision, recall, and F1-score classification metrics:
-Predictive Model Architecture               Classification Test Accuracy            Optimization Target Status
-Linear Discriminant Analysis (LDA)                    ~75.5%                           Baseline Benchmarking
-Random Forest Ensemble                                ~84.3%                           Production Candidate
+Predictive Model Architecture,Classification Test Accuracy,Optimization Target Status
+Linear Discriminant Analysis (LDA),~75.5%,Baseline Benchmarking
+Random Forest Ensemble,~84.3%,Production Candidate
 
 # Random Forest Classification Report
                 precision    recall  f1-score   support
