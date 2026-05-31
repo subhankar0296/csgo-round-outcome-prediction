@@ -47,15 +47,15 @@ counterstrike-round-predictor/
 ```
 
 ## ⚙️ Data Pipeline & Technical Architecture
-1. Data Ingestion & Sanitization
+- 1. Data Ingestion & Sanitization
 Addressed low-memory mixed-datatype warnings during data ingestion directly via optimized interpreter parameters.
 
 Handled missing data entries programmatically by enforcing a clean-in-place sequence (dropna) to guarantee matrix integrity before downstream mathematical operations.
 
-2. Feature Engineering & Preprocessing
+- 2. Feature Engineering & Preprocessing
 Categorical Conversion: Transformed domain-specific nominal attributes (map, bomb_planted) into model-ready numerical values using robust Label Encoding.
 
-Feature Scaling: Normalized wide feature variances (e.g., thousands of dollars in economy balances vs. single-digit utility counts) via a StandardScaler to eliminate magnitude and scale bias.
+- Feature Scaling: Normalized wide feature variances (e.g., thousands of dollars in economy balances vs. single-digit utility counts) via a StandardScaler to eliminate magnitude and scale bias.
 
 Stratified Splitting: Applied stratified splitting (test_size=0.2) to maintain perfectly balanced class distributions across the training and testing sets.
 
