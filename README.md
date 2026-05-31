@@ -65,7 +65,7 @@ Predictive Model Architecture          Classification Test Accuracy           Op
 Linear Discriminant Analysis (LDA)             ~74.63%                           Baseline Benchmarking
 Random Forest Ensemble                         ~87.73%                           Production Candidate
 ```
-# Random Forest Classification Report
+## Random Forest Classification Report
                 precision    recall  f1-score   support
 
           CT       0.87      0.89      0.88     12001
