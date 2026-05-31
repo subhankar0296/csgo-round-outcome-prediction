@@ -34,6 +34,11 @@ counterstrike-round-predictor/
 ├── notebooks/
 │   └── csgo_round_predict.ipynb        # Interactive data profiling and charting
 │
+├── images/                             # Asset repository
+│   └── target_distribution.png         
+│   ├── feature_importance_matrix.png
+│   └── model_confusion_matrix.png        
+│
 ├── src/
 │   └── main.py                         # Production-ready, modular execution script
 │
@@ -63,22 +68,24 @@ Random Forest Classifier: Deployed as an advanced ensemble technique to capture 
 The models were evaluated using overall predictive accuracy alongside detailed precision, recall, and F1-score classification metrics:
 ```
 Predictive Model Architecture             Classification Test Accuracy           Optimization Target Status
-Linear Discriminant Analysis (LDA)                 ~75.5%                           Baseline Benchmarking
-Random Forest Ensemble                             ~84.3%                           Production Candidate
+Linear Discriminant Analysis (LDA)                 ~74.63%                           Baseline Benchmarking
+Random Forest Ensemble                             ~87.73%                           Production Candidate
 ```
 # Random Forest Classification Report
                 precision    recall  f1-score   support
 
-      CT Win       0.84      0.84      0.84     10174
-       T Win       0.84      0.84      0.84     10193
+          CT       0.87      0.89      0.88     12001
+           T       0.89      0.87      0.88     12481
 
-     accuracy                           0.84     20367
-     macro avg      0.84      0.84      0.84     20367
-     weighted avg   0.84      0.84      0.84     20367
+    accuracy                           0.88     24482
+    macro avg      0.88      0.88      0.88     24482
+    weighted avg   0.88      0.88      0.88     24482
+
+    
 
 ## 🧠 Key Learnings & Engineering Outcomes
 - End-to-End Execution: Developed a complete machine learning lifecycle including pipeline ingestion, structured data imputation, feature scaling, mathematical dimensionality reduction, and evaluation matrix generations.
 
-- Scaling Realities: Confirmed that while simpler models like LDA offer excellent mathematical explainability and fast inference speeds, complex ensemble methods provide the non-linear boundaries required to secure a significant ~9% accuracy boost on live game telemetry.
+- Scaling Realities: Confirmed that while simpler models like LDA offer excellent mathematical explainability and fast inference speeds, complex ensemble methods provide the non-linear boundaries required to secure a significant ~13% accuracy boost on live game telemetry.
 
 - Clean Code Standards: Refactored exploratory notebook blocks into modular, reusable Python functions paired with explicit parameter tracking to ensure script maintainability and scalability.
