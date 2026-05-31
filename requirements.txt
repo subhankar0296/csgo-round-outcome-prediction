@@ -1,0 +1,9 @@
+# Core Data Analytics and Manipulation Libraries
+pandas>=1.5.0
+numpy>=1.22.0
+
+# Machine Learning and Predictive Modeling Pipeline
+scikit-learn>=1.0.0
+
+# Data Visualization and Profiling (For your Jupyter Notebook phase)
+matplotlib>=3.5.0
