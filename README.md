@@ -47,22 +47,16 @@ counterstrike-round-predictor/
 ```
 
 ## ⚙️ Data Pipeline & Technical Architecture
-- 1. Data Ingestion & Sanitization
+* **1. Data Ingestion & Sanitization**
 Addressed low-memory mixed-datatype warnings during data ingestion directly via optimized interpreter parameters.
-
 Handled missing data entries programmatically by enforcing a clean-in-place sequence (dropna) to guarantee matrix integrity before downstream mathematical operations.
-
-- 2. Feature Engineering & Preprocessing
-Categorical Conversion: Transformed domain-specific nominal attributes (map, bomb_planted) into model-ready numerical values using robust Label Encoding.
-
+* **2. Feature Engineering & Preprocessing**
+- Categorical Conversion: Transformed domain-specific nominal attributes (map, bomb_planted) into model-ready numerical values using robust Label Encoding.
 - Feature Scaling: Normalized wide feature variances (e.g., thousands of dollars in economy balances vs. single-digit utility counts) via a StandardScaler to eliminate magnitude and scale bias.
-
-Stratified Splitting: Applied stratified splitting (test_size=0.2) to maintain perfectly balanced class distributions across the training and testing sets.
-
-3. Model Architecture & Evaluation
-Linear Discriminant Analysis (LDA): Employed as a baseline mathematical reduction model to find the optimal linear combination of features that separates the two winning classes.
-
-Random Forest Classifier: Deployed as an advanced ensemble technique to capture non-linear relationships, multi-variable interactions, and deep decision boundaries.
+- Stratified Splitting: Applied stratified splitting (test_size=0.2) to maintain perfectly balanced class distributions across the training and testing sets.
+* **3. Model Architecture & Evaluation**
+- Linear Discriminant Analysis (LDA): Employed as a baseline mathematical reduction model to find the optimal linear combination of features that separates the two winning classes.
+- Random Forest Classifier: Deployed as an advanced ensemble technique to capture non-linear relationships, multi-variable interactions, and deep decision boundaries.
 
 ## 📈 Performance Matrix & Results
 The models were evaluated using overall predictive accuracy alongside detailed precision, recall, and F1-score classification metrics:
