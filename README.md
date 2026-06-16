@@ -32,7 +32,7 @@ counterstrike-round-predictor/
 │   └── csgo_round_snapshots.csv        # Raw Data 
 │
 ├── notebooks/
-│   └── csgo_round_predict.ipynb        # Interactive data profiling and charting
+│   └── csgo_round_outcome_predict.ipynb        # Interactive data profiling and charting
 │
 ├── images/                             # Asset repository
 │   └── target_distribution.png         
