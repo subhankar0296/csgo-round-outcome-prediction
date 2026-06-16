@@ -39,9 +39,6 @@ counterstrike-round-predictor/
 │   ├── feature_importance_matrix.png
 │   └── model_confusion_matrix.png        
 │
-├── src/
-│   └── main.py                         # Production-ready, modular execution script
-│
 ├── README.md                           # Detailed project documentation
 └── requirements.txt                    # Project dependencies and environment tracking
 ```
