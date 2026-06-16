@@ -29,18 +29,18 @@ To maintain industry-standard data hygiene and keep the repository clean, the wo
 counterstrike-round-predictor/
 │
 ├── data/
-│   └── csgo_round_snapshots.csv        # Raw Data 
+│   └── csgo_round_snapshots.csv                # Raw Data 
 │
 ├── notebooks/
-│   └── csgo_round_outcome_predict.ipynb        # Interactive data profiling and charting
+│   └── csgo_round_outcome_predict.ipynb        # CSGO Project
 │
-├── images/                             # Asset repository
+├── images/                                     # Asset repository
 │   └── target_distribution.png         
 │   ├── feature_importance_matrix.png
 │   └── model_confusion_matrix.png        
 │
-├── README.md                           # Detailed project documentation
-└── requirements.txt                    # Project dependencies and environment tracking
+├── README.md                                   # Detailed project documentation
+└── requirements.txt                            # Project dependencies and environment tracking
 ```
 
 ## ⚙️ Data Pipeline & Technical Architecture
