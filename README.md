@@ -5,7 +5,7 @@
 [![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=flat&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 
 ## 📌 Project Overview
-In fast-paced, resource-driven competitive esports environments like Counter-Strike, real-time match outcome forecasting is a highly valuable asset for live broadcasting analytics, team strategy optimization, and odds-estimation engines. The core challenge lies in modeling the complex, dynamic interdependencies between tactical milestones, team economic states, and immediate player attrition metrics.
+In competitive esports games like Counter-Strike, being able to predict match outcomes in real time is very useful. Broadcasters can use it to make live coverage more engaging, teams can use it to adjust strategies, and betting platforms can use it to set fair odds. The main challenge is that outcomes depend on many fast-changing factors—such as tactical moves, team finances, and player eliminations—that are all connected in complex ways.
 
 This project builds an end-to-end machine learning classification pipeline using a dataset of **101,832 round snapshots** to predict whether the Counter-Terrorist (CT) or Terrorist (T) faction will secure the round. The pipeline bridges standard statistical approaches with advanced ensemble techniques to optimize overall predictive metrics.
 
@@ -28,11 +28,11 @@ To maintain industry-standard data hygiene and keep the repository clean, the wo
 ```text
 counterstrike-round-predictor/
 │
-├── data/
-│   └── csgo_round_snapshots.csv                # Raw Data 
-│
 ├── notebooks/
 │   └── csgo_round_outcome_predict.ipynb        # CSGO Project
+│
+├── data/
+│   └── csgo_round_snapshots.csv                # Raw Data 
 │
 ├── images/                                     # Asset repository
 │   └── target_distribution.png         
@@ -43,13 +43,13 @@ counterstrike-round-predictor/
 └── requirements.txt                            # Project dependencies and environment tracking
 ```
 
-## ⚙️ Data Pipeline & Technical Architecture
-### 1. Data Ingestion & Sanitization
-Addressed low-memory mixed-datatype warnings during data ingestion directly via optimized interpreter parameters.
-Handled missing data entries programmatically by enforcing a clean-in-place sequence (dropna) to guarantee matrix integrity before downstream mathematical operations.
+## ⚙️ Data Pipeline & Technical Setup
+### 1. Data Ingestion & Cleaning
+- Fixed memory issues when loading mixed data types by adjusting system settings.
+- Removed missing values directly in the dataset to keep the data consistent before running calculations.
 ### 2. Feature Engineering & Preprocessing
-- Categorical Conversion: Transformed domain-specific nominal attributes (map, bomb_planted) into model-ready numerical values using robust Label Encoding.
-- Feature Scaling: Normalized wide feature variances (e.g., thousands of dollars in economy balances vs. single-digit utility counts) via a StandardScaler to eliminate magnitude and scale bias.
+- Categorical Conversion: Turned text-based attributes (like map or bomb_planted) into numbers using Label Encoding so models could process them.
+- Feature Scaling: Standardized values so large numbers (like money balances) didn’t outweigh small ones (like utility counts).
 - Stratified Splitting: Applied stratified splitting (test_size=0.2) to maintain perfectly balanced class distributions across the training and testing sets.
 ### 3. Model Architecture & Evaluation
 - Linear Discriminant Analysis (LDA): Employed as a baseline mathematical reduction model to find the optimal linear combination of features that separates the two winning classes.
@@ -74,9 +74,9 @@ Random Forest Ensemble                         ~87.73%                          
 
     
 
-## 🧠 Key Learnings & Engineering Outcomes
-- End-to-End Execution: Developed a complete machine learning lifecycle including pipeline ingestion, structured data imputation, feature scaling, mathematical dimensionality reduction, and evaluation matrix generations.
+## 🧠 Key Learnings & Outcomes
+- Complete Project Execution: Built the full machine learning process from start to finish, including data cleaning, scaling, reducing dimensions, and evaluating results.
 
-- Scaling Realities: Confirmed that while simpler models like LDA offer excellent mathematical explainability and fast inference speeds, complex ensemble methods provide the non-linear boundaries required to secure a significant ~13% accuracy boost on live game telemetry.
+- Model Insights: Learned that simple models like LDA are easy to explain and fast, but more advanced models (like ensembles) capture complex patterns and improved accuracy by about 13% on real game data.
 
-- Clean Code Standards: Refactored exploratory notebook blocks into modular, reusable Python functions paired with explicit parameter tracking to ensure script maintainability and scalability.
+- Clean Coding: Converted messy notebook code into neat, reusable Python functions with clear parameters, making the project easier to maintain and scale.
